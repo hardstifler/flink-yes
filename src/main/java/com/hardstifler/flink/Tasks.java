@@ -20,6 +20,7 @@ package com.hardstifler.flink;
 
 import com.hardstifler.flink.tasks.fraud.FrundDetectorTask;
 import com.hardstifler.flink.tasks.keyfunc.KeyTask;
+import com.hardstifler.flink.tasks.watermarks.WatermarksTask;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
 
@@ -30,10 +31,12 @@ public class Tasks {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
+        /***
         new FrundDetectorTask(env);
 
         new KeyTask(env);
-
+        */
+        new WatermarksTask(env);
 
         env.execute("Fraud Detection");
 

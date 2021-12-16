@@ -23,15 +23,15 @@ public class KeyTask implements Serializable {
     public KeyTask(StreamExecutionEnvironment env) {
 
         DataStream<Person> pStream = env.fromElements(
-                new Person("1", 1, "1", "1"),
-                new Person("10", 1, "1", "1"),
-                new Person("11", 1, "1", "1"),
-                new Person("12", 1, "1", "1"),
-                new Person("22", 1, "1", "1"),
-                new Person("33", 1, "1", "1"),
-                new Person("44", 1, "1", "1"),
-                new Person("45", 1, "1", "1"),
-                new Person("32", 1, "1", "1")
+                new Person("1", 1, "1", "1", 0),
+                new Person("10", 1, "1", "1", 0),
+                new Person("11", 1, "1", "1", 0),
+                new Person("12", 1, "1", "1", 0),
+                new Person("22", 1, "1", "1", 0),
+                new Person("33", 1, "1", "1", 0),
+                new Person("44", 1, "1", "1", 0),
+                new Person("45", 1, "1", "1", 0),
+                new Person("32", 1, "1", "1", 0)
         );
 
         DataStream<Person> pfStream = pStream.
